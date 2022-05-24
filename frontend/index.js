@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import Game4Artifact from './artifacts/contracts/Game4.sol/Game4';
 
-const GAME4_ADDRESS = '0xB2197e832b16296F39e9B29Ca79a91620D58c739';
+const GAME_ADDRESS = '0x5cFd6B40ea7a8FbcBa5cb85C3cf101Ad85310B7A';
 
 (async function () {
   // get the injected EIP 1193 provider from MetaMask
@@ -16,12 +16,12 @@ const GAME4_ADDRESS = '0xB2197e832b16296F39e9B29Ca79a91620D58c739';
 
   let signer = await provider.getSigner();
 
-  let game4 = new ethers.Contract(GAME4_ADDRESS, Game4Artifact.abi, signer);
+  let game = new ethers.Contract(GAME_ADDRESS, Game4Artifact.abi, signer);
 
   // export variables for use in console
-  window.GAME4_ADDRESS = GAME4_ADDRESS;
+  window.GAME_ADDRESS = GAME_ADDRESS;
   window.ethers = ethers;
   window.provider = provider;
   window.signer = signer;
-  window.game4 = game4;
+  window.game = game;
 }());

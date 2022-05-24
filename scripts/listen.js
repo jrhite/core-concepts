@@ -1,4 +1,4 @@
-const GAME_ADDRESS = '0xB2197e832b16296F39e9B29Ca79a91620D58c739';
+const GAME_ADDRESS = '0x5cFd6B40ea7a8FbcBa5cb85C3cf101Ad85310B7A';
 
 async function main() {
   const game = await hre.ethers.getContractAt('IGame', GAME_ADDRESS);
